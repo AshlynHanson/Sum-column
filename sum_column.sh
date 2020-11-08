@@ -33,7 +33,7 @@ then
       sum=0
       # the requested column without the header row
       column=$(cut -f$2 $1 | tail -n +2)
-      anyNumber='^[+-]?[0-9]$'
+      anyNumber='^[+-]?[0-9]+$'
       for number in $column
       do
         if [[ $number =~ $anyNumber ]]
